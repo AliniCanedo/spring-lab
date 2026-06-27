@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: spring-lab
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: spring-lab
+
+  template:
+
+    metadata:
+      labels:
+        app: spring-lab
+
+    spec:
+      containers:
+
+      - name: spring-lab
+
+        image: nginx:latest
+
+        ports:
+        - containerPort: 80
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: spring-lab
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: spring-lab
+
+  template:
+
+    metadata:
+      labels:
+        app: spring-lab
+
+    spec:
+      containers:
+
+      - name: spring-lab
+
+        image: spring-lab:v1
+
+        imagePullPolicy: Never
+
+        ports:
+
+        - containerPort: 8081

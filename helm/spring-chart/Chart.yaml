@@ -1,0 +1,8 @@
+apiVersion: v2
+name: spring-chart
+description: Helm Chart da aplicação Spring Lab
+type: application
+
+version: 0.1.0
+
+appVersion: "1.0.0"
